@@ -52,7 +52,12 @@ sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 ![id Command Output](screenshots/clean.png)
 
 ## Usage
-Daily Check:bashsudo aide --check --config=/etc/aide/aide.minimal.confAfter Updates:bashsudo aide --update --config=/etc/aide/aide.minimal.conf
+Daily Check:
+sudo aide --check --config=/etc/aide/aide.minimal.conf
+
+## After Updates:
+
+sudo aide --update --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 
 ## Report Interpretation
