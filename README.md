@@ -57,7 +57,9 @@ sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.dbReport Interpretation
 f++++++++++++++ = File addedd = ... mc. = Directory metadata changed  All files match = No unauthorized changes detected
 
 ## Requirements
-Ubuntu 20.04+VirtualBox or any VMsudo privileges
+Ubuntu 20.04+
+VirtualBox or any VM
+sudo privileges
 
 ## License
 MIT
