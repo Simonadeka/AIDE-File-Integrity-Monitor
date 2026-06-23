@@ -51,14 +51,16 @@ sudo aide --update --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 ![id Command Output](screenshots/clean.png)
 
+
 ## Usage
 Daily Check:
 sudo aide --check --config=/etc/aide/aide.minimal.conf
 
-### After Updates:
 
+### After Updates:
 sudo aide --update --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+
 
 ### Report Interpretation
 f++++++++++++++ = File added
@@ -67,10 +69,12 @@ d = ... mc. = Directory metadata changed
 
 All files match = No unauthorized changes detected
 
+
 ### Requirements
 Ubuntu 20.04+
 VirtualBox or any VM
 sudo privileges
+
 
 ## License
 MIT
