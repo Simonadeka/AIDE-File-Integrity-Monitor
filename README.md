@@ -57,7 +57,9 @@ sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 
 ## Report Interpretation
 f++++++++++++++ = File added
-d= ... mc. = Directory metadata changed  
+
+d = ... mc. = Directory metadata changed  
+
 All files match = No unauthorized changes detected
 
 ## Requirements
