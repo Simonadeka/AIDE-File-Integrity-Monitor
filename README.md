@@ -40,7 +40,7 @@ sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 ![id Command Output](screenshots/db-build.png)
 
 Verify database:bashls -lh /var/lib/aide/aide.db
-![id Command Output](screenshots/size.png)
+![id Command Output](screenshots/db-size.png)
 
 ## 4. Test Detectionbashsudo touch /etc/test_aide.txt
 sudo aide --check --config=/etc/aide/aide.minimal.conf
