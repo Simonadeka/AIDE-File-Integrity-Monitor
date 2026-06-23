@@ -53,8 +53,12 @@ sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 
 ## Usage
 Daily Check:bashsudo aide --check --config=/etc/aide/aide.minimal.confAfter Updates:bashsudo aide --update --config=/etc/aide/aide.minimal.conf
-sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.dbReport Interpretation
-f++++++++++++++ = File addedd = ... mc. = Directory metadata changed  All files match = No unauthorized changes detected
+sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+
+## Report Interpretation
+f++++++++++++++ = File added
+d = ... mc. = Directory metadata changed  
+All files match = No unauthorized changes detected
 
 ## Requirements
 Ubuntu 20.04+
