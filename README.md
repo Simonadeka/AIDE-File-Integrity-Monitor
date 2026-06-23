@@ -32,7 +32,7 @@ ALLXTRAHASHES = sha1+sha256+sha512+rmd160+ftype+perm+inode+user+group+size+mtime
 /sbin ALLXTRAHASHES
 /usr/bin ALLXTRAHASHES
 /usr/sbin ALLXTRAHASHESSave: Ctrl+O → Enter → Ctrl+X
-![id Command Output](screenshots/id-root-access.png)
+![id Command Output](screenshots/config.png)
 
 
 ## 3. Initialize Databasebashsudo aide --init --config=/etc/aide/aide.minimal.conf
