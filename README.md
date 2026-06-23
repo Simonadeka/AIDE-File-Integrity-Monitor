@@ -18,6 +18,7 @@ Implement reliable file integrity monitoring using AIDE on Ubuntu VirtualBox. De
 
 sudo apt update
 sudo apt install aide -y2.
+![id Command Output](screenshots/install.png)
 
  ## 2.  Create Minimal Config
 sudo nano /etc/aide/aide.minimal.conf
