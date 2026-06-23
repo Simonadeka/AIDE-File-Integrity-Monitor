@@ -19,8 +19,9 @@ Implement reliable file integrity monitoring using AIDE on Ubuntu VirtualBox. De
 sudo apt update
 sudo apt install aide -y2.
 
-## Create Minimal Config
-sudo nano /etc/aide/aide.minimal.confPaste:confdatabase_out = file:/var/lib/aide/aide.db.new
+ ## 2.  Create Minimal Config
+sudo nano /etc/aide/aide.minimal.conf
+database_out = file:/var/lib/aide/aide.db.new
 database = file:/var/lib/aide/aide.db
 database_new_string = gzip_dbfile_out
 gzip_dbout = yes
@@ -33,18 +34,18 @@ ALLXTRAHASHES = sha1+sha256+sha512+rmd160+ftype+perm+inode+user+group+size+mtime
 ![id Command Output](screenshots/id-root-access.png)
 
 
-3. Initialize Databasebashsudo aide --init --config=/etc/aide/aide.minimal.conf
+## 3. Initialize Databasebashsudo aide --init --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 ![id Command Output](screenshots/id-root-access.png)
 
 Verify database:bashls -lh /var/lib/aide/aide.db
 ![id Command Output](screenshots/id-root-access.png)
 
-4. Test Detectionbashsudo touch /etc/test_aide.txt
+## 4. Test Detectionbashsudo touch /etc/test_aide.txt
 sudo aide --check --config=/etc/aide/aide.minimal.conf
 ![id Command Output](screenshots/id-root-access.png)
 
-## Cleanup and update:bashsudo rm /etc/test_aide.txt
+## 5. Cleanup and update:bashsudo rm /etc/test_aide.txt
 sudo aide --update --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 ![id Command Output](screenshots/id-root-access.png)
