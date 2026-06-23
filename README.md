@@ -43,12 +43,12 @@ Verify database:bashls -lh /var/lib/aide/aide.db
 
 ## 4. Test Detectionbashsudo touch /etc/test_aide.txt
 sudo aide --check --config=/etc/aide/aide.minimal.conf
-![id Command Output](screenshots/id-root-access.png)
+![id Command Output](screenshots/detection.png)
 
 ## 5. Cleanup and update:bashsudo rm /etc/test_aide.txt
 sudo aide --update --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
-![id Command Output](screenshots/id-root-access.png)
+![id Command Output](screenshots/clean.png)
 
 ## Usage
 Daily Check:bashsudo aide --check --config=/etc/aide/aide.minimal.confAfter Updates:bashsudo aide --update --config=/etc/aide/aide.minimal.conf
