@@ -15,11 +15,11 @@ Implement reliable file integrity monitoring using AIDE on Ubuntu VirtualBox. De
 ## Setup
 
 ### 1. Install AIDE
-```bash
+
 sudo apt update
 sudo apt install aide -y2.
 
-Create Minimal Config
+## Create Minimal Config
 sudo nano /etc/aide/aide.minimal.confPaste:confdatabase_out = file:/var/lib/aide/aide.db.new
 database = file:/var/lib/aide/aide.db
 database_new_string = gzip_dbfile_out
@@ -30,22 +30,32 @@ ALLXTRAHASHES = sha1+sha256+sha512+rmd160+ftype+perm+inode+user+group+size+mtime
 /sbin ALLXTRAHASHES
 /usr/bin ALLXTRAHASHES
 /usr/sbin ALLXTRAHASHESSave: Ctrl+O → Enter → Ctrl+X
+![id Command Output](screenshots/id-root-access.png)
 
 
 3. Initialize Databasebashsudo aide --init --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+![id Command Output](screenshots/id-root-access.png)
 
 Verify database:bashls -lh /var/lib/aide/aide.db
+![id Command Output](screenshots/id-root-access.png)
 
-Part of this response isn't supported on this device yet. View the full response on your phone.
 4. Test Detectionbashsudo touch /etc/test_aide.txt
-sudo aide --check --config=/etc/aide/aide.minimal.confPart of this response isn't supported on this device yet. View the full response on your phone.
-Cleanup and update:bashsudo rm /etc/test_aide.txt
+sudo aide --check --config=/etc/aide/aide.minimal.conf
+![id Command Output](screenshots/id-root-access.png)
+
+## Cleanup and update:bashsudo rm /etc/test_aide.txt
 sudo aide --update --config=/etc/aide/aide.minimal.conf
-sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.dbPart of this response isn't supported on this device yet. View the full response on your phone.
-Usage
+sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db
+![id Command Output](screenshots/id-root-access.png)
+
+## Usage
 Daily Check:bashsudo aide --check --config=/etc/aide/aide.minimal.confAfter Updates:bashsudo aide --update --config=/etc/aide/aide.minimal.conf
 sudo mv /var/lib/aide/aide.db.new /var/lib/aide/aide.dbReport Interpretation
-f++++++++++++++ = File addedd = ... mc. = Directory metadata changed  All files match = No unauthorized changes detectedRequirements
-Ubuntu 20.04+VirtualBox or any VMsudo privilegesLicense
+f++++++++++++++ = File addedd = ... mc. = Directory metadata changed  All files match = No unauthorized changes detected
+
+## Requirements
+Ubuntu 20.04+VirtualBox or any VMsudo privileges
+
+## License
 MIT
