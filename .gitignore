@@ -1,0 +1,3 @@
+# AIDE database files - don't commit actual DB
+/var/lib/aide/aide.db
+/var/lib/aide/aide.db.new
